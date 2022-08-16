@@ -1,5 +1,4 @@
 import React from 'react'
-import img from "../naim.jpg"
 
 const Hero = () => {
     return (
@@ -16,7 +15,7 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-                            <img className="rounded-lg-3 img-fluid" src={img} alt="" width="" height="" />
+                            <img className="rounded-lg-3 img-fluid" src='/images/naim.jpg' alt="" width="" height="" />
                         </div>
                     </div>
                 </div>
