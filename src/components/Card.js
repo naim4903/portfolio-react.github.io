@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ({ img = "", project = "" }) => {
+const MyCard = ({ img = "", project = "" }) => {
     return (
         <>
             <div className="col-lg-4">
@@ -16,4 +16,4 @@ const Card = ({ img = "", project = "" }) => {
     )
 }
 
-export default Card
+export default MyCard;

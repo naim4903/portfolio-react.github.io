@@ -1,22 +1,22 @@
 import React from 'react'
+import { Card } from "react-bootstrap"
 
 const About = () => {
     return (
         <div>
             <section className="about-section pt-5" id="about">
                 <div className="container py-5">
-                    <div className="row p-4 pb-0 pe-lg-0 pt-lg-0 align-items-center rounded-3 border shadow-lg">
-                        <div className="col p-3 p-lg-5 pt-lg-3">
+                    <Card className='shadow-sm'>
+                        <Card.Body className='p-4'>
                             <h2 className="text-muted">About me</h2>
-                            <p className="lead fs-3 fw-normal">Hi! I'm Naim Tarafder. An experienced ReactJs developer. I have 6
+                            <p className="lead fs-4 fw-normal">Hi! I'm Naim Tarafder. An experienced ReactJs developer. <br /> I have 6
                                 month
-                                experience workingwith react,redux,expressJs,NodeJs.
+                                experience working with react,redux,expressJs,NodeJs.
                                 I'm also familiar with NextJs,Bootsrap,git,Github,Jquery.
                             </p>
 
-                        </div>
-
-                    </div>
+                        </Card.Body>
+                    </Card>
                 </div>
             </section>
 

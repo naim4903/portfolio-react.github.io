@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto" !important;
+}
+
+#edit-tabs .nav-tabs {
+  background: transparent !important;
+  box-shadow: none;
+  border-radius: 0 0 8px 0;
+  margin-bottom: 5px;
+  border-color: transparent;
+  font-family: "Roboto";
+}
+#edit-tabs .nav-tabs .nav-link {
+  padding: 0.5rem !important;
+  border-color: transparent;
+  color: rgba(255, 255, 255, 0.795);
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  letter-spacing: 0.1rem;
+}
+#edit-tabs .nav-tabs .nav-link.active {
+  background-color: transparent;
+  color: white;
+  border-bottom: 3px solid white;
+  font-size: 1.3rem;
+}
+#edit-tabs .nav-tabs .nav-item.active::after {
+  display: block;
+  content: "";
+  height: 4px;
+  background: #000;
+  position: relative;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+#edit-tabs .nav-tabs .nav-item:hover {
+  border: none;
+  background: rgba(234, 234, 234, 0.2823529412);
+  transition: 0.6s ease all;
+}
+#edit-tabs .nav-tabs .nav-item:hover .nav-link {
+  color: white;
+}
+
+.hero-section {
+  background: url(../images/nasa-Q1p7bh3SHj8-unsplash.jpg) no-repeat;
+  background-size: cover;
+}
+.hero-section .intro {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 0;
+}/*# sourceMappingURL=home.css.map */
