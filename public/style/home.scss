@@ -7,6 +7,7 @@
 }
 
 $tab-color: #ffff;
+$sky-blue: #66bfbf;
 $robot0400: 'Roboto';
 
 body {
@@ -79,5 +80,15 @@ body {
         align-items: center;
         flex-direction: column;
         padding: 3rem 0;
+
     }
+}
+
+.counter {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $sky-blue;
 }

@@ -3,19 +3,20 @@ import MyCard from './Card'
 import { Card } from 'react-bootstrap'
 
 const Project = () => {
+
     return (
         <div>
             <section className="project-section" id="project">
                 <div className="container p-5">
                     <div className="">
-                        <Card className='py-1 border-0 bg-success bg-opacity-25'>
+                        <Card className='pt-2 border-0 bg-success bg-opacity-25'>
                             <Card.Text>
                                 <h4 className="text-center fw-bold">My Projects</h4>
                             </Card.Text>
                         </Card>
                     </div>
                     <div className="row mt-4">
-                        <MyCard img='/images/counter.png' project='Counter App' />
+                        <MyCard img='/images/todo.png' project='Todo App' link="todo" />
                         <MyCard img='/images/theme-toggler.png' project='Theme Toggler' />
                         <MyCard img='/images/Tic-Tac-Toe.png' project='Tic Tac Toe' />
                     </div>
