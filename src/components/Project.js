@@ -11,13 +11,13 @@ const Project = () => {
                     <div className="">
                         <Card className='pt-2 border-0 bg-success bg-opacity-25'>
                             <Card.Text>
-                                <h4 className="text-center fw-bold">My Projects</h4>
+                                <h5 className="text-center text-white fw-bold" style={{ letterSpacing: "3px" }}>My Projects</h5>
                             </Card.Text>
                         </Card>
                     </div>
                     <div className="row mt-4">
                         <MyCard img='/images/todo.png' project='Todo App' link="todo" />
-                        <MyCard img='/images/theme-toggler.png' project='Theme Toggler' />
+                        <MyCard img='/images/movie.png' project='Movie Api' link='movies' />
                         <MyCard img='/images/Tic-Tac-Toe.png' project='Tic Tac Toe' />
                     </div>
                     <div className="row mt-4">

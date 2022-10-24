@@ -13,7 +13,7 @@ const Navbar = () => {
                         <Nav.Link eventKey="link-1">Projects</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link eventKey="link-2">Contact</Nav.Link>
+                        <Nav.Link href='/contact' eventKey="link-2">Contact</Nav.Link>
                     </Nav.Item>
                 </Nav>
             </div>
