@@ -8,7 +8,7 @@
 
 body {
   font-family: "Roboto" !important;
-  background-color: #111 !important;
+  /* background-color: #111 !important; */
 }
 
 #edit-tabs .nav-tabs {

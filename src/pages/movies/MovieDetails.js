@@ -1,11 +1,74 @@
-import React from 'react'
-import { Button } from "react-bootstrap"
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import { Button, Container, Row, Col, Card, Spinner } from "react-bootstrap"
+import { useParams, Link } from 'react-router-dom'
+import StarsRating from 'stars-rating'
 
 const MovieDetails = () => {
+    const [movieDetails, setMovieDetails] = useState({});
+    const [loading, setLoading] = useState(false);
+
+    const params = useParams();
+
+    useEffect(() => {
+        if (params.imdbId) {
+            setLoading(true);
+            getMovieDetails(params.imdbId);
+        } else {
+            return
+        }
+    }, []);
+
+    const getMovieDetails = async (id) => {
+        try {
+            let resp = await axios.get(`http://www.omdbapi.com/?apikey=${process.env.REACT_APP_MOVIE_API_KEY}&i=${id}`);
+            if (resp.data) {
+                setLoading(false);
+                setMovieDetails(resp.data);
+            }
+        } catch (error) {
+            console.log(error);
+            setLoading(false);
+        }
+    };
+
+    if (loading) {
+        return (
+            <div className='vw-100 vh-100 d-flex justify-content-center align-items-center'>
+                <Spinner animation='border' variant="light" />
+            </div>
+        )
+    };
+
     return (
-        <div className='text-white'>
-            <Button>hello</Button>
-        </div>
+        <Container className='mt-5'>
+            <Card className='bg-dark text-white'>
+                <Row>
+                    <Col md={4}>
+                        <Card.Img src={movieDetails.Poster} />
+                    </Col>
+                    <Col md={8}>
+                        <Card.Body>
+                            <ul className='fs-5 pt-3' style={{ listStyle: "none", lineHeight: "2.1rem" }}>
+                                <li><span className='text-muted'>Title</span> : {movieDetails.Title}</li>
+                                <li><span className='text-muted'>Actors</span> : {movieDetails.Actors}</li>
+                                <li><span className='text-muted'>Genre</span> : {movieDetails.Genre}</li>
+                                <li><span className='text-muted'>Plot</span> : {movieDetails.Plot}</li>
+                                <li><span className='text-muted'>Director</span> : {movieDetails.Director}</li>
+                                <li><span className='text-muted'>Writer</span> : {movieDetails.Writer}</li>
+                                <li><span className='text-muted'>Released</span> : {movieDetails.Released}</li>
+                                <li className='mb-2'> <StarsRating count={5} edit={false} value={parseInt(movieDetails.imdbRating)} size={26} /></li>
+                                <Link to={"/movies"}>
+                                    <li>
+                                        <Button className='btn-light fs-6' size='sm'><i className="bi bi-arrow-left-circle-fill"></i> Go Back</Button>
+                                    </li>
+                                </Link>
+                            </ul>
+                        </Card.Body>
+                    </Col>
+                </Row>
+            </Card>
+        </Container>
     )
 }
 

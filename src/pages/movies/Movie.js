@@ -20,7 +20,7 @@ const Movie = () => {
 
     const getMovies = async () => {
         try {
-            let resp = await axios.get(`http://www.omdbapi.com/?apikey=7a9e765e&s=${movieName ? movieName : "2022"}&page=${page}&type=${type}`);
+            let resp = await axios.get(`http://www.omdbapi.com/?apikey=${process.env.REACT_APP_MOVIE_API_KEY}&s=${movieName ? movieName : "2022"}&page=${page}&type=${type}`);
             if (resp.data.Response === "True") {
                 setMovies([]);
                 setMovies(resp.data.Search);
