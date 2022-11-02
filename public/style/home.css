@@ -33,7 +33,7 @@ body {
   background-color: transparent;
   color: white;
   border-bottom: 3px solid white;
-  font-size: 1.3rem;
+  /* font-size: 1.3rem; */
 }
 
 #edit-tabs .nav-tabs .nav-item.active::after {
@@ -60,6 +60,7 @@ body {
 
 .hero-section {
   background: url(../images/nasa-Q1p7bh3SHj8-unsplash.jpg) no-repeat;
+  /* min-height: 90vh; */
   background-size: cover;
 }
 
@@ -94,4 +95,11 @@ body {
 
 .movie-card:hover {
   box-shadow: 0 1rem 3rem rgba(134, 132, 132, 0.185) !important;
+}
+
+.progress-bar {
+  height: 2rem !important;
+  border-radius: 1rem !important;
+  font-size: .9rem !important;
+  background-color: #ededed !important;
 }

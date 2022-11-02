@@ -2,6 +2,7 @@ import React from 'react'
 import MyCard from './Card'
 import { Card } from 'react-bootstrap'
 
+
 const Project = () => {
 
     return (
@@ -18,7 +19,7 @@ const Project = () => {
                     <div className="row mt-4">
                         <MyCard img='/images/todo.png' project='Todo App' link="todo" />
                         <MyCard img='/images/movie.png' project='Movie Api' link='movies' />
-                        <MyCard img='/images/Tic-Tac-Toe.png' project='Tic Tac Toe' />
+                        <MyCard img='/images/quiz_app_next.png' project='Quiz App' href="https://naim-quiz.netlify.app/" />
                     </div>
                     <div className="row mt-4">
                         <MyCard img='images/random user.png' project='Random User' />

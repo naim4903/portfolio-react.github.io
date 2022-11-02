@@ -1,7 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
-const MyCard = ({ img = "", project = "", link = "" }) => {
+const MyCard = ({ img = "", project = "", link = "", href = "#" }) => {
 
     const navigate = useNavigate();
 
@@ -12,7 +12,9 @@ const MyCard = ({ img = "", project = "", link = "" }) => {
                     <img src={img} className="card-img-top" height="250px"
                         alt="..." />
                     <div className="card-body text-center">
-                        <h5 className="card-title">{project}</h5>
+                        <a href={href} style={{ textDecoration: "none" }}>
+                            <h5 className="card-title">{project}</h5>
+                        </a>
                     </div>
                 </div>
             </div>
