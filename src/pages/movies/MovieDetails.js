@@ -21,7 +21,7 @@ const MovieDetails = () => {
 
     const getMovieDetails = async (id) => {
         try {
-            let resp = await axios.get(`http://www.omdbapi.com/?apikey=${process.env.REACT_APP_MOVIE_API_KEY}&i=${id}`);
+            let resp = await axios.get(`https://www.omdbapi.com/?apikey=${process.env.REACT_APP_MOVIE_API_KEY}&i=${id}`);
             if (resp.data) {
                 setLoading(false);
                 setMovieDetails(resp.data);
