@@ -1,5 +1,4 @@
 import React from 'react'
-import About from './About'
 import Hero from './Hero'
 import Project from './Project'
 import Skills from './Skills'
@@ -9,7 +8,6 @@ const Home = () => {
         <>
             <Hero />
             <Project />
-            <About />
             <Skills />
         </>
     )

@@ -103,3 +103,43 @@ body {
   font-size: .9rem !important;
   background-color: #ededed !important;
 }
+
+.page-link {
+  background-color: transparent !important;
+  color: #ffff !important;
+  border: none !important;
+}
+
+.page-link:hover {
+  background-color: #000 !important;
+}
+
+.active>.page-link {
+  background-color: #000 !important;
+}
+
+#todo-card {
+  background-color: #66bfbf;
+}
+
+@media only screen and (max-width: 768px) {
+  #todo-card {
+    min-width: 100% !important;
+  }
+
+  #todo-item {
+    min-width: 80% !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #todo-item {
+    min-width: 100% !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #todo-item {
+    min-width: 40% !important;
+  }
+}

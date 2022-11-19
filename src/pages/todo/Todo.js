@@ -71,11 +71,11 @@ const Todo = () => {
         <div className="counter">
             <h1 className='text-white fs-1'>Todo List</h1>
             <h6 className='text-success'>You have {itemData.length} Todos</h6>
-            <Card className='w-50 mb-2 border-0'>
+            <Card className='w-50 mb-2 border-0' id='todo-card'>
                 <Card.Body className='p-0 w-100'>
                     <Form onSubmit={handleSubmit}>
                         <Row>
-                            <Col md={9} className="p-0">
+                            <Col xs={12} md={9} className="p-0 mb-2">
                                 <Form.Group>
                                     <Form.Control
                                         type='text'
@@ -85,7 +85,7 @@ const Todo = () => {
                                     />
                                 </Form.Group>
                             </Col>
-                            <Col md={3} className="p-0">
+                            <Col xs={12} md={3} className="p-0">
                                 {
                                     mode === "Add" ?
                                         <Button variant="success" type='submit' className="w-100">Add</Button>
@@ -102,7 +102,7 @@ const Todo = () => {
             </Card>
             {
                 itemData.length > 0 && itemData.map((itm, i) => (
-                    <Card key={i} className="mb-2 w-25">
+                    <Card key={i} className="mb-2 w-25" id='todo-item'>
                         <Card.Body className='p-2'>
                             {i + 1}. {itm.item}
                             <i className="bi float-end bi-trash3-fill"

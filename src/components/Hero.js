@@ -22,17 +22,20 @@ const Hero = () => {
                                     <div className="py-5 text-white">
                                         <div className='mb-3'>
                                             <p className='m-0'>HTML/CSS</p>
-                                            <ProgressBar now={90} label={`${90}%`} variant="info" className='progress-bar' />
+                                            <ProgressBar now={80} label={`${80}%`} variant="info" className='progress-bar' />
                                         </div>
                                         <div className='mb-3'>
                                             <p className='m-0'>Javascript</p>
-                                            <ProgressBar now={90} label={`${90}%`} variant="info" className='progress-bar' />
+                                            <ProgressBar now={80} label={`${80}%`} variant="info" className='progress-bar' />
                                         </div>
                                         <div className='mb-3'>
                                             <p className='m-0'>React</p>
                                             <ProgressBar now={80} label={`${80}%`} variant="info" className='progress-bar' />
                                         </div>
-
+                                        <div className='mb-3'>
+                                            <p className='m-0'>NextJS</p>
+                                            <ProgressBar now={80} label={`${80}%`} variant="info" className='progress-bar' />
+                                        </div>
                                     </div>
                                 </Col>
                             </Row>

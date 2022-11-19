@@ -7,7 +7,7 @@ const Navbar = () => {
             <div id='edit-tabs'>
                 <Nav variant="tabs" defaultActiveKey="home">
                     <Nav.Item>
-                        <Nav.Link eventKey={"home"}>Home</Nav.Link>
+                        <Nav.Link eventKey={"home"} className='p-0 m-0'>Home</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link href='#project'>Projects</Nav.Link>
