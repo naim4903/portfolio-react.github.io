@@ -10,8 +10,8 @@ const Todo = () => {
     const [mode, setMode] = useState("Add");
 
     useEffect(() => {
-        if (sessionStorage.getItem("todo")) {
-            setItemData(JSON.parse(sessionStorage.getItem("todo")))
+        if (localStorage.getItem("todo")) {
+            setItemData(JSON.parse(localStorage.getItem("todo")))
         }
     }, []);
 
@@ -20,7 +20,7 @@ const Todo = () => {
         if (item) {
             let data = [...itemData, { id: v4(), item: item }];
             setItemData(data);
-            sessionStorage.setItem("todo", JSON.stringify(data))
+            localStorage.setItem("todo", JSON.stringify(data))
             toast.success("todo added !")
             setItem("");
         } else {
@@ -34,7 +34,7 @@ const Todo = () => {
             return itm.id !== id;
         });
         setItemData(data);
-        sessionStorage.setItem("todo", JSON.stringify(data));
+        localStorage.setItem("todo", JSON.stringify(data));
         toast.success("todo deleted !")
     };
 
@@ -44,7 +44,7 @@ const Todo = () => {
                 itm.item = item;
             }
         });
-        sessionStorage.setItem("todo", JSON.stringify(itemData));
+        localStorage.setItem("todo", JSON.stringify(itemData));
         setItemData([...itemData]);
         setTimeout(() => {
             setItem("");
